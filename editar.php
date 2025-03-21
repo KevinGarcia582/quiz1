@@ -3,6 +3,7 @@ include 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
+
     $sql = "SELECT * FROM personas WHERE id = $id";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
